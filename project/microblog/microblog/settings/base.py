@@ -12,7 +12,14 @@ ADMINS = (
 MANAGERS = ADMINS
 
 DATABASES = {
-    'default': dj_database_url.config()
+    'default': {
+    'ENGINE': 'django.db.backends.postgresql_psycopg2',
+    'NAME': 'microblog',
+    'USER': 'vagrant',
+    'PASSWORD': 'gswd',
+    'HOST': '', # Set to empty string for localhost.
+    'PORT': '', # Set to empty string for default.
+    }
 }
 
 TIME_ZONE = 'America/New_York'

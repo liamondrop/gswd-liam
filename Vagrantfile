@@ -16,12 +16,16 @@ Vagrant.configure("2") do |config|
 
   config.vm.provision :chef_solo do |chef|
     chef.cookbooks_path = ["cookbooks", "site-cookbooks"]
+    chef.add_recipe "python"
     chef.add_recipe "postgresql::server_debian"
     chef.add_recipe "postgresql::ruby"
-    chef.add_recipe "vim"
+    chef.add_recipe "postgresql::psycopg2"
     chef.add_recipe "gswd::database"
-    chef.add_recipe "python"
+    chef.add_recipe "vim"
     chef.json = {
+      :app_user => "vagrant",
+      :home_folder => "/home/vagrant/",
+      :source_folder => "/vagrant/project/microblog/",
       :postgresql => {
         :listen_addresses => '*',
         :password => {:postgres => "gswd"}

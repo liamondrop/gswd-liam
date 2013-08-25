@@ -42,7 +42,7 @@ STATIC_URL = '/static/'
 
 # Additional locations of static files
 STATICFILES_DIRS = (
-    os_path_join(SITE_ROOT, 'assets')
+    os_path_join(SITE_ROOT, 'assets'),
 )
 
 STATICFILES_FINDERS = (
@@ -56,7 +56,7 @@ TEMPLATE_LOADERS = (
 )
 
 TEMPLATE_DIRS = (
-    os_path_join(SITE_ROOT, 'templates')
+    os_path_join(SITE_ROOT, 'templates'),
 )
 
 SECRET_KEY = '2#xh*yy_*=9lu!vjf$tbnz-k^tw1jri53p95$al7l0mn=7qvg)'

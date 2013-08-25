@@ -1,2 +1,3 @@
 .vagrant/*
 .DS_Store
+project/microblog/microblog/settings/local.py

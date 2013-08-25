@@ -1,6 +1,7 @@
 # Django settings for microblog project.
-import django
 import os
+import django
+import dj_database_url
 
 DEBUG = False
 TEMPLATE_DEBUG = DEBUG
@@ -11,14 +12,7 @@ ADMINS = (
 MANAGERS = ADMINS
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'microblog',
-        'USER': 'vagrant',
-        'PASSWORD': 'gswd',
-        'HOST': '', # Set to empty string for localhost.
-        'PORT': '', # Set to empty string for default.
-    }
+    'default': dj_database_url.config()
 }
 
 TIME_ZONE = 'America/New_York'

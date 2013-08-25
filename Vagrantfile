@@ -19,7 +19,7 @@ Vagrant.configure("2") do |config|
     chef.add_recipe "python"
     chef.add_recipe "postgresql::server_debian"
     chef.add_recipe "postgresql::ruby"
-    chef.add_recipe "postgresql::psycopg2"
+    chef.add_recipe "postgresql::django"
     chef.add_recipe "gswd::database"
     chef.add_recipe "vim"
     chef.json = {
